@@ -1,0 +1,20 @@
+    l = LEFT(i)
+    r = RIGHT(i)
+    if l ≤ A.heap-size and A[l] < A[i]
+        smallest = l
+    else smallest = i
+    if r ≤ A.heap-size and A[r] < A[smallest]
+        smallest = r
+    if smallest != i
+        exchange A[i] with A[smallest]
+        MIN-HEAPIFY(A, smallest)
+        
+        
+        
+        Question :
+        Starting with the procedure \text{MAX-HEAPIFY}MAX-HEAPIFY, write pseudocode for the procedure
+        \text{MIN-HEAPIFY}(A, i)MIN-HEAPIFY(A,i), which performs the corresponding manipulation on a min-heap.
+        How does the running time of \text{MIN-HEAPIFY}MIN-HEAPIFY compare to that of \text{MAX-HEAPIFY}MAX-HEAPIFY?
+        
+        
+ The algorithm is the same with the exceptions that we are performing the minimum, thus the run time on a node of height h as O(h)
